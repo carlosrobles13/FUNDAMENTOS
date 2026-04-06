@@ -1,0 +1,384 @@
+<div class="app-shell">
+  <header class="hero">
+    <div class="container hero__wrap">
+      <div class="hero__left">
+        <span class="eyebrow">Versión 2 · Interactiva · Pro</span>
+        <h1>Guía Didáctica de Sistema de Refuerzo Sonoro</h1>
+        <p class="hero__text">
+          Plataforma interactiva para ingenieros en sonido y técnicos en sonido.
+          Aprende a resolver ejercicios de período, frecuencia, longitud de onda,
+          velocidad del sonido, desfase en grados, cancelación y suma entre ondas correlacionadas.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#fundamentos" class="btn btn--primary">Empezar</a>
+          <a href="#ejercicios" class="btn btn--ghost">Ver ejercicios guiados</a>
+        </div>
+      </div>
+
+      <div class="hero__right glass">
+        <h3>Reglas de esta guía</h3>
+        <ul class="rules">
+          <li><strong>Si hay temperatura:</strong> usar <code>c = 331.4 + (0.607 × T)</code></li>
+          <li><strong>Si no hay temperatura:</strong> usar <code>c = 340 m/s</code></li>
+          <li><strong>Período:</strong> <code>T = 1 / f</code></li>
+          <li><strong>Longitud de onda:</strong> <code>λ = c / f</code></li>
+          <li><strong>Grados con tiempo:</strong> <code>° = (Δt / T) × 360</code></li>
+          <li><strong>Grados con distancia:</strong> <code>° = (Δd / λ) × 360</code></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <nav class="topnav">
+    <div class="container topnav__wrap">
+      <a href="#fundamentos">Fundamentos</a>
+      <a href="#formulas">Fórmulas</a>
+      <a href="#calculadoras">Calculadoras</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#ejercicios">Ejercicios paso a paso</a>
+      <a href="#herramientas">Herramientas</a>
+    </div>
+  </nav>
+
+  <main class="container main-content">
+    <section id="fundamentos" class="section">
+      <div class="section__head">
+        <span class="section__tag">Base teórica</span>
+        <h2>Fundamentos rápidos</h2>
+        <p>
+          Esta guía trabaja con frecuencia, período, longitud de onda, velocidad del sonido
+          y relaciones de fase entre señales. Los ejercicios del documento incluyen casos con
+          temperatura, grados recorridos por distancia y grados recorridos por tiempo. :contentReference[oaicite:1]{index=1}
+        </p>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card glass">
+          <h3>Frecuencia y período</h3>
+          <p>La frecuencia indica cuántos ciclos ocurren por segundo.</p>
+          <div class="formula-box">T = 1 / f</div>
+          <p class="muted">
+            Si la frecuencia está en Hz, el período sale en segundos.
+            Para pasar a milisegundos, multiplica por 1000.
+          </p>
+        </article>
+
+        <article class="card glass">
+          <h3>Longitud de onda</h3>
+          <p>La longitud de onda es la distancia física que ocupa un ciclo.</p>
+          <div class="formula-box">λ = c / f</div>
+          <p class="muted">
+            Si usas metros por segundo y Hz, el resultado queda en metros.
+          </p>
+        </article>
+
+        <article class="card glass">
+          <h3>Velocidad del sonido</h3>
+          <p>La velocidad cambia con la temperatura.</p>
+          <div class="formula-box">c = 331.4 + (0.607 × T)</div>
+          <p class="muted">
+            Cuando el ejercicio no trae temperatura, se usa <strong>340 m/s</strong>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="formulas" class="section">
+      <div class="section__head">
+        <span class="section__tag">Resumen matemático</span>
+        <h2>Fórmulas clave</h2>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card glass">
+          <h3>Fórmulas principales</h3>
+          <div class="formula-list">
+            <div class="formula-row"><span>Período</span><code>T = 1 / f</code></div>
+            <div class="formula-row"><span>Frecuencia</span><code>f = 1 / T</code></div>
+            <div class="formula-row"><span>Longitud de onda</span><code>λ = c / f</code></div>
+            <div class="formula-row"><span>Velocidad del sonido</span><code>c = 331.4 + (0.607 × T)</code></div>
+          </div>
+        </article>
+
+        <article class="card glass">
+          <h3>Grados de fase</h3>
+          <div class="formula-list">
+            <div class="formula-row"><span>Grados con tiempo</span><code>° = (Δt / T) × 360</code></div>
+            <div class="formula-row"><span>Grados con distancia</span><code>° = (Δd / λ) × 360</code></div>
+            <div class="formula-row"><span>180°</span><code>cancelación máxima</code></div>
+            <div class="formula-row"><span>0° / 360°</span><code>suma máxima ≈ +6 dB</code></div>
+            <div class="formula-row"><span>90° / 270°</span><code>suma parcial ≈ +3 dB</code></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Observación importante:</strong>
+        En todos los ejercicios donde sí aparezca temperatura, la app usará
+        <code>c = 331.4 + (0.607 × T)</code>. Cuando no aparezca temperatura,
+        usará <code>340 m/s</code>.
+      </div>
+    </section>
+
+    <section id="calculadoras" class="section">
+      <div class="section__head">
+        <span class="section__tag">Interactivo</span>
+        <h2>Calculadoras didácticas</h2>
+        <p>Ingresa valores y revisa el procedimiento paso a paso.</p>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card glass">
+          <h3>Calculadora de período</h3>
+          <label>Frecuencia</label>
+          <div class="field-row">
+            <input type="number" id="periodFreqInput" placeholder="Ej: 9000">
+            <select id="periodFreqUnit">
+              <option value="Hz">Hz</option>
+              <option value="kHz">kHz</option>
+            </select>
+          </div>
+          <button class="btn btn--primary full" id="calcPeriod">Calcular período</button>
+          <div class="result-box" id="periodOutput">Resultado: —</div>
+          <div class="steps-box" id="periodSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Calculadora de frecuencia</h3>
+          <label>Período</label>
+          <div class="field-row">
+            <input type="number" id="freqPeriodInput" placeholder="Ej: 0.4">
+            <select id="freqPeriodUnit">
+              <option value="ms">ms</option>
+              <option value="s">s</option>
+            </select>
+          </div>
+          <button class="btn btn--primary full" id="calcFrequency">Calcular frecuencia</button>
+          <div class="result-box" id="freqOutput">Resultado: —</div>
+          <div class="steps-box" id="freqSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Calculadora de longitud de onda</h3>
+          <label>Frecuencia</label>
+          <div class="field-row">
+            <input type="number" id="lambdaFreqInput" placeholder="Ej: 3000">
+            <select id="lambdaFreqUnit">
+              <option value="Hz">Hz</option>
+              <option value="kHz">kHz</option>
+            </select>
+          </div>
+
+          <label>Temperatura (opcional)</label>
+          <input type="number" id="lambdaTempInput" placeholder="Si no hay temperatura, se usa 340">
+
+          <button class="btn btn--primary full" id="calcLambda">Calcular longitud de onda</button>
+          <div class="result-box" id="lambdaOutput">Resultado: —</div>
+          <div class="steps-box" id="lambdaSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Calculadora de velocidad del sonido</h3>
+          <label>Temperatura en °C</label>
+          <input type="number" id="speedTempInput" placeholder="Ej: 40">
+          <button class="btn btn--primary full" id="calcSpeed">Calcular velocidad</button>
+          <div class="result-box" id="speedOutput">Resultado: —</div>
+          <div class="steps-box" id="speedSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Grados con tiempo</h3>
+          <label>Frecuencia</label>
+          <div class="field-row">
+            <input type="number" id="degTimeFreqInput" placeholder="Ej: 2000">
+            <select id="degTimeFreqUnit">
+              <option value="Hz">Hz</option>
+              <option value="kHz">kHz</option>
+            </select>
+          </div>
+
+          <label>Diferencia de tiempo</label>
+          <div class="field-row">
+            <input type="number" id="degTimeInput" placeholder="Ej: 0.125">
+            <select id="degTimeUnit">
+              <option value="ms">ms</option>
+              <option value="s">s</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary full" id="calcDegTime">Calcular grados con tiempo</button>
+          <div class="result-box" id="degTimeOutput">Resultado: —</div>
+          <div class="steps-box" id="degTimeSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Grados con distancia</h3>
+          <label>Frecuencia</label>
+          <div class="field-row">
+            <input type="number" id="degDistFreqInput" placeholder="Ej: 500">
+            <select id="degDistFreqUnit">
+              <option value="Hz">Hz</option>
+              <option value="kHz">kHz</option>
+            </select>
+          </div>
+
+          <label>Diferencia de distancia</label>
+          <div class="field-row">
+            <input type="number" id="degDistInput" placeholder="Ej: 51">
+            <select id="degDistUnit">
+              <option value="cm">cm</option>
+              <option value="m">m</option>
+            </select>
+          </div>
+
+          <label>Temperatura (opcional)</label>
+          <input type="number" id="degDistTempInput" placeholder="Si no hay temperatura, se usa 340">
+
+          <button class="btn btn--primary full" id="calcDegDistance">Calcular grados con distancia</button>
+          <div class="result-box" id="degDistOutput">Resultado: —</div>
+          <div class="steps-box" id="degDistSteps"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="simulador" class="section">
+      <div class="section__head">
+        <span class="section__tag">Visual</span>
+        <h2>Simulador de fase</h2>
+        <p>Visualiza dos ondas correlacionadas y observa el efecto del desfase.</p>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card glass">
+          <h3>Entradas del simulador</h3>
+
+          <label>Frecuencia</label>
+          <div class="field-row">
+            <input type="number" id="simFreqInput" value="2000">
+            <select id="simFreqUnit">
+              <option value="Hz">Hz</option>
+              <option value="kHz">kHz</option>
+            </select>
+          </div>
+
+          <label>Temperatura (opcional)</label>
+          <input type="number" id="simTempInput" placeholder="Si no hay temperatura, se usa 340">
+
+          <label>Diferencia de tiempo</label>
+          <div class="field-row">
+            <input type="number" id="simTimeInput" placeholder="Ej: 0.125">
+            <select id="simTimeUnit">
+              <option value="ms">ms</option>
+              <option value="s">s</option>
+            </select>
+          </div>
+
+          <label>Diferencia de distancia</label>
+          <div class="field-row">
+            <input type="number" id="simDistInput" placeholder="Ej: 1.4">
+            <select id="simDistUnit">
+              <option value="cm">cm</option>
+              <option value="m">m</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button class="btn btn--primary" id="simulateByTime">Simular con tiempo</button>
+            <button class="btn btn--ghost" id="simulateByDistance">Simular con distancia</button>
+          </div>
+
+          <div class="result-box" id="simOutput">Resultado: —</div>
+          <div class="steps-box" id="simSteps"></div>
+        </article>
+
+        <article class="card glass">
+          <h3>Visualización</h3>
+          <div class="phase-readout">
+            <div class="phase-readout__item">
+              <span>Grados</span>
+              <strong id="phaseValue">0°</strong>
+            </div>
+            <div class="phase-readout__item">
+              <span>Efecto</span>
+              <strong id="phaseEffect">Suma máxima aproximada</strong>
+            </div>
+          </div>
+
+          <div class="phase-bar">
+            <div class="phase-bar__fill" id="phaseBarFill"></div>
+          </div>
+
+          <canvas id="waveCanvas" width="720" height="260"></canvas>
+
+          <div class="phase-guide">
+            <span>0° / 360° → +6 dB aprox.</span>
+            <span>90° / 270° → +3 dB aprox.</span>
+            <span>180° → cancelación</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ejercicios" class="section">
+      <div class="section__head">
+        <span class="section__tag">Práctica</span>
+        <h2>Ejercicios con explicación paso a paso</h2>
+        <p>
+          Los ejercicios están basados en la guía subida, con sus respuestas y desarrollo lógico:
+          período, longitud de onda, velocidad, grados, cancelación y suma. :contentReference[oaicite:2]{index=2}
+        </p>
+      </div>
+
+      <div class="quiz-progress glass">
+        <div class="quiz-progress__top">
+          <span>Progreso del quiz</span>
+          <strong id="quizScoreText">0 / 14 correctas</strong>
+        </div>
+        <div class="quiz-progress__bar">
+          <div class="quiz-progress__fill" id="quizScoreFill"></div>
+        </div>
+      </div>
+
+      <div id="exerciseList" class="exercise-list"></div>
+    </section>
+
+    <section id="herramientas" class="section">
+      <div class="section__head">
+        <span class="section__tag">Apoyo externo</span>
+        <h2>Herramientas y apps recomendadas</h2>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card glass">
+          <h3>Calculadora científica</h3>
+          <p>
+            Ideal para hacer conversiones entre segundos, milisegundos, Hz, kHz, metros y centímetros.
+          </p>
+        </article>
+
+        <article class="card glass">
+          <h3>Generador de tonos</h3>
+          <p>
+            Útil para escuchar distintas frecuencias y relacionar teoría con práctica.
+          </p>
+        </article>
+
+        <article class="card glass">
+          <h3>Osciloscopio / RTA</h3>
+          <p>
+            Ayuda a visualizar desfases, suma y cancelación entre señales.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Página educativa interactiva para enseñanza de ejercicios de sistema de refuerzo sonoro.
+      </p>
+    </div>
+  </footer>
+</div>
